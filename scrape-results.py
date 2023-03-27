@@ -141,7 +141,7 @@ all_seasons = list(all_seasons)
 
 all_matches = [match for season in all_seasons for match in season]
 
-match_records = async_scraping(get_match_info, all_matches)
+match_records = async_scraping(get_match_info, all_matches[:20])
 match_records = list(match_records)
 df = pd.DataFrame(match_records)
 df.to_csv("records.csv", index = False)
