@@ -24,7 +24,7 @@ jobs:
         run: python -m playwright install-deps
 
       - name: Run the scraping script
-        run: python scrape-results-playwright.py
+        run: python scrape-results.py
         
       - name: Commit and push if content changed
         run: |-
