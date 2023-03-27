@@ -141,10 +141,10 @@ all_seasons = list(all_seasons)
 
 all_matches = [match for season in all_seasons for match in season]
 
-match_records = async_scraping(get_match_info, all_matches[:20])
+match_records = async_scraping(get_match_info, all_matches)
 match_records = list(match_records)
 df = pd.DataFrame(match_records)
-df.to_csv("records.csv", index = False)
+df.to_csv("./data/records.csv", index = False)
 
 toc = time.perf_counter()
 print(f"Completed in {toc - tic:0.4f} seconds")
