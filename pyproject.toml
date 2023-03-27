@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "scrape-results-playwright"
+version = "0.1.0"
+description = ""
+authors = ["Pete Brown <15838790+petebrown@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "scrape_results_playwright"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+playwright = "^1.31.1"
+beautifulsoup4 = "^4.11.2"
+lxml = "^4.9.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
